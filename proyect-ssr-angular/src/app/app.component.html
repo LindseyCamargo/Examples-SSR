@@ -1,0 +1,27 @@
+<div class="form">
+
+  <h1> Ejemplo de formulario reactivo </h1>
+
+  <form class="form-content" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-content-camp">
+      <label>Nombre Completo</label>
+      <input type="text" name="fullName" placeholder="Eduardo Cardenas" formControlName="fullName">
+    </div>
+
+    <div class="form-content-camp">
+      <label>Correo Electronico</label>
+      <input type="email" name="email" placeholder="Ejemplo@correo.com" formControlName="email">
+    </div>
+
+    <div class="form-content-camp">
+      <label>Mensaje</label>
+      <textarea name="message" placeholder="Necesito más información" formControlName="message"></textarea>
+    </div>
+
+    <button>Enviar</button>
+  </form>
+
+</div>
+
+<router-outlet></router-outlet>
